@@ -1,0 +1,13 @@
+#!/usr/bin/env perl
+
+use strict;
+use warnings;
+use 5.012;
+
+use Authen::OATH;
+use Convert::Base32 qw/decode_base32/;
+
+chomp (my $key = <STDIN>);
+
+my $oath = Authen::OATH->new;
+say $oath->totp( decode_base32($key) );
