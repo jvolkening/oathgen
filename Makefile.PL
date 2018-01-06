@@ -25,6 +25,7 @@ WriteMakefile(
 
         # non-core
         'Authen::OATH' => 0,
+        'Convert::Base32' => 0,
     },
     EXE_FILES => [qw|
         oathgen
